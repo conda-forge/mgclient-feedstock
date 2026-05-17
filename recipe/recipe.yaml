@@ -1,6 +1,6 @@
 context:
   name: mgclient
-  version: "1.4.5"
+  version: "1.5.0"
   m2: ${{ "" if unix else "m2-" }}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/memgraph/mgclient/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: cbb8383fbf647ad3374e8b9a2b96b44a106f3255192e9c67141ac9efc5c52485
+  sha256: 7934ee5fb2a5a9ddf861b9255cb092594e30b6b1fe88b55a4966d736933b5ef1
   patches:
     - if: not unix
       then:
@@ -31,8 +31,8 @@ requirements:
     - openssl
   run:
     - openssl
-  run_exports:                                                                                                    
-    - ${{ pin_subpackage('mgclient', upper_bound='x.x') }}                                                     
+  run_exports:
+    - ${{ pin_subpackage('mgclient', upper_bound='x.x') }}
 
 tests:
   - package_contents:
