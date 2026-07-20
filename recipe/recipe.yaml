@@ -1,6 +1,6 @@
 context:
   name: mgclient
-  version: "1.6.0"
+  version: "1.7.0"
   m2: ${{ "" if unix else "m2-" }}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/memgraph/mgclient/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 64502446000d54398a4c70cf92c004ebaecb3c422139704b60d84c8d1659a171
+  sha256: 6042b76ef587840c87207b289f74ebb341b31d3cd948a7aa84dc67c868c4a5eb
   patches:
     - if: not unix
       then:
